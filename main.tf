@@ -26,6 +26,14 @@ resource "aws_security_group" "web_sg" {
   }
 }
 
+terraform {
+  backend "s3" {
+    bucket = "yuli-github-actions-terraform-state"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
 # EC2 instance resource definition
 resource "aws_instance" "my_server" {
    ami           = data.aws_ami.amazonlinux.id  # Use the AMI ID from the data source

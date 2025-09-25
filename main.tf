@@ -8,7 +8,7 @@ locals {
     aws_key = "YULIS_MAC_KEY_EAST1"   # SSH key pair name for EC2 instance access
 }
 
-resource "aws_security_group" "web_sg" {
+resource "aws_security_group-github" "web_sg" {
   name = "allow-web-traffic"
 
   ingress {

@@ -28,7 +28,7 @@ resource "aws_security_group" "web_sg" {
 
 terraform {
   backend "s3" {
-    bucket = "yuli-github-actions-terraform-state"
+    bucket = "yuli-github-terraform-state"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
